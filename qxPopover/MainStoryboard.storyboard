@@ -22,7 +22,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="eJ4-Eu-h62" kind="popover" popoverAnchorView="8qf-Yp-fKk" id="Lgv-ah-CFL">
+                                    <segue destination="eJ4-Eu-h62" kind="popover" identifier="Popover" popoverAnchorView="8qf-Yp-fKk" id="Lgv-ah-CFL">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>

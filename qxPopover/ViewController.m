@@ -35,4 +35,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if( [[segue identifier] isEqualToString:@"Popover"] )
+    {
+//        _popoverSegue = (UIStoryboardPopoverSegue*)segue;
+//        [[segue destinationViewController] setDelegate:self];
+        NSLog(@"popoverSegue");
+
+    }
+}
 @end
