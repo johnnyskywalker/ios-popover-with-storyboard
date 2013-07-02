@@ -42,6 +42,8 @@
     {
 //        _popoverSegue = (UIStoryboardPopoverSegue*)segue;
 //        [[segue destinationViewController] setDelegate:self];
+        PopoverViewController *pvController = [segue destinationViewController];
+        pvController.stringFromSegue = @"ChangedText";
         NSLog(@"popoverSegue");
 
     }

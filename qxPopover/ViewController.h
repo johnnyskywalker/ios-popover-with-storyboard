@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PopoverViewController.h"
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) UIStoryboardPopoverSegue* popoverSegue;

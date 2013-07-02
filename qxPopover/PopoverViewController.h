@@ -11,5 +11,6 @@
 @interface PopoverViewController : UIViewController <UIPopoverControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *languageTableView;
+@property (weak, nonatomic) NSString *stringFromSegue;
 
 @end

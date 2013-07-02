@@ -36,6 +36,8 @@
     _languageTableView.delegate = self;
     _languageTableView.dataSource = self;
     
+    //_stringFromSegue = @"OriginText";
+    
     NSLog(@"PopoverView loaded");
 }
 
@@ -75,6 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"%@", [languages objectAtIndex:[indexPath row]]);
+    NSLog(@"%@", _stringFromSegue);
 }
 
 @end
