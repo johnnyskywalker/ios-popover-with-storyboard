@@ -11,4 +11,6 @@
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) UIStoryboardPopoverSegue* popoverSegue;
+
+- (void) setInput: (NSString *) theText;
 @end

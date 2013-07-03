@@ -78,6 +78,8 @@
 {
     NSLog(@"%@", [languages objectAtIndex:[indexPath row]]);
     NSLog(@"%@", _stringFromSegue);
+    
+    [self.delegate setInput: [languages objectAtIndex:[indexPath row]]];
 }
 
 @end

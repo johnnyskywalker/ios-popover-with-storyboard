@@ -44,8 +44,15 @@
 //        [[segue destinationViewController] setDelegate:self];
         PopoverViewController *pvController = [segue destinationViewController];
         pvController.stringFromSegue = @"ChangedText";
+        
+        [pvController setDelegate:self];
         NSLog(@"popoverSegue");
 
     }
+}
+
+- (void) setInput: (NSString *) theText
+{
+    NSLog(@"popover returned: %@", theText);
 }
 @end
