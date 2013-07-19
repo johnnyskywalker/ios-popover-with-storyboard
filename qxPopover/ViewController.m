@@ -51,6 +51,14 @@
         pvController = [_popoverSegue destinationViewController];
         pvController.stringFromSegue = @"ChangedText";
         pvController.delegate = self;
+        
+        NSLog(@"%@", pvController);
+        NSLog(@"%@", _popoverSegue.popoverController);
+        
+        //pvController.contentSizeForViewInPopover = CGSizeMake(400, 500);
+        _popoverSegue.popoverController.popoverContentSize = CGSizeMake(300, [pvController.languages count] * [pvController.languageTableView rowHeight]);
+        NSLog(@"%d", [pvController.languages count]);
+        NSLog(@"%f", [pvController.languageTableView rowHeight]);
     }
 }
 

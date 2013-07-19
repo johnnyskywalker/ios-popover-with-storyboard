@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PopoverViewController.h"
 
-@interface ViewController : UIViewController <UIPopoverControllerDelegate>
+@interface ViewController : UIViewController
 @property (strong, nonatomic) UIStoryboardPopoverSegue* popoverSegue;
 @property (weak, nonatomic) IBOutlet UIButton *PopoverButton;
 

@@ -7,10 +7,11 @@
 //
 
 #import "PopoverViewController.h"
+#import "ViewController.h"
 
 @interface PopoverViewController ()
 {
-    NSArray *languages;
+    //NSArray *languages;
 }
 
 @end
@@ -31,10 +32,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    languages = @[@"English (America)", @"English (British)", @"Chinese Tranditional", @"Chinese Simplified", @"Korean", @"Japanese"];
+    _languages = @[@"English (America)", @"English (British)", @"Chinese Tranditional", @"Chinese Simplified", @"Korean", @"Japanese", @"Arabic", @"Spain", @"Portige", @"Mongolia", @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J"];
     
     _languageTableView.delegate = self;
     _languageTableView.dataSource = self;
+    
+    [_languageTableView sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +56,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [languages count];
+    return [_languages count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,7 +67,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:MyIdentifier];
     }
     
-    cell.textLabel.text = [languages objectAtIndex:[indexPath row]];
+    cell.textLabel.text = [_languages objectAtIndex:[indexPath row]];
     return cell;
 }
 
@@ -72,10 +75,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%@", [languages objectAtIndex:[indexPath row]]);
+    NSLog(@"%@", [_languages objectAtIndex:[indexPath row]]);
     NSLog(@"%@", _stringFromSegue);
     
-    [self.delegate setInput: [languages objectAtIndex:[indexPath row]]];
+    [self.delegate setInput: [_languages objectAtIndex:[indexPath row]]];
     UITableViewCell *cell =[tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
 }
