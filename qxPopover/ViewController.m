@@ -8,7 +8,9 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    PopoverViewController *pvController;
+}
 
 @end
 
@@ -40,19 +42,20 @@
 {
     if( [[segue identifier] isEqualToString:@"Popover"] )
     {
-//        _popoverSegue = (UIStoryboardPopoverSegue*)segue;
-//        [[segue destinationViewController] setDelegate:self];
-        PopoverViewController *pvController = [segue destinationViewController];
+        pvController = [segue destinationViewController];
         pvController.stringFromSegue = @"ChangedText";
         
         [pvController setDelegate:self];
-        NSLog(@"popoverSegue");
-
     }
 }
 
 - (void) setInput: (NSString *) theText
 {
     NSLog(@"popover returned: %@", theText);
+    [_PopoverButton setTitle:theText forState:UIControlStateNormal];
+    
+    if (pvController) {
+        [pvController dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 @end

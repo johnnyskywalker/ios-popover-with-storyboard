@@ -35,10 +35,6 @@
     
     _languageTableView.delegate = self;
     _languageTableView.dataSource = self;
-    
-    //_stringFromSegue = @"OriginText";
-    
-    NSLog(@"PopoverView loaded");
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,6 +76,14 @@
     NSLog(@"%@", _stringFromSegue);
     
     [self.delegate setInput: [languages objectAtIndex:[indexPath row]]];
+    UITableViewCell *cell =[tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell =[tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
 }
 
 @end

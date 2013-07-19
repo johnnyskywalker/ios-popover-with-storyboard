@@ -34,6 +34,9 @@
                             <constraint firstAttribute="trailing" secondItem="8qf-Yp-fKk" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="m5d-sv-MIo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="PopoverButton" destination="8qf-Yp-fKk" id="BdA-Gq-IL7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ss-Mn-iMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
