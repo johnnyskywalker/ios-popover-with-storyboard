@@ -12,7 +12,10 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-Yp-fKk">
+                            <button opaque="NO" tag="233" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-Yp-fKk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="Ze9-7g-aOi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Popover">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -47,7 +50,7 @@
             <objects>
                 <viewController id="eJ4-Eu-h62" customClass="PopoverViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JDN-8n-e33">
-                        <rect key="frame" x="0.0" y="20" width="300" height="300"/>
+                        <rect key="frame" x="0.0" y="20" width="300" height="250"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="wWR-1H-uYa">
@@ -56,10 +59,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.58309218169999999" green="1" blue="0.64353065139999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="wWR-1H-uYa" firstAttribute="bottom" secondItem="JDN-8n-e33" secondAttribute="bottom" type="default" id="D8D-UR-Cwk"/>
                             <constraint firstItem="wWR-1H-uYa" firstAttribute="top" secondItem="JDN-8n-e33" secondAttribute="top" type="default" id="Dfy-Cu-ADL"/>
-                            <constraint firstItem="wWR-1H-uYa" firstAttribute="trailing" secondItem="JDN-8n-e33" secondAttribute="trailing" type="default" id="O9F-eh-vCp"/>
+                            <constraint firstItem="wWR-1H-uYa" firstAttribute="trailing" secondItem="JDN-8n-e33" secondAttribute="trailing" type="default" id="e5Z-ej-Fri"/>
                             <constraint firstItem="wWR-1H-uYa" firstAttribute="leading" secondItem="JDN-8n-e33" secondAttribute="leading" type="default" id="hEc-ct-jBN"/>
+                            <constraint firstItem="wWR-1H-uYa" firstAttribute="bottom" secondItem="JDN-8n-e33" secondAttribute="bottom" type="default" id="ipV-nz-g77"/>
                         </constraints>
                     </view>
                     <connections>

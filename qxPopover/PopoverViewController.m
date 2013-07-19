@@ -31,7 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    languages = @[@"English (Amercia)", @"English (British)", @"Chinese Tranditional", @"Chinese Simplized"];
+    languages = @[@"English (America)", @"English (British)", @"Chinese Tranditional", @"Chinese Simplified", @"Korean", @"Japanese"];
     
     _languageTableView.delegate = self;
     _languageTableView.dataSource = self;

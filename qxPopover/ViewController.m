@@ -10,6 +10,8 @@
 
 @interface ViewController () {
     PopoverViewController *pvController;
+    
+    UIButton *langBtn;
 }
 
 @end
@@ -29,6 +31,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    langBtn = (UIButton *)[self.view viewWithTag:233];
+    [langBtn setTitle:@"English (America)" forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -42,10 +47,10 @@
 {
     if( [[segue identifier] isEqualToString:@"Popover"] )
     {
-        pvController = [segue destinationViewController];
+        _popoverSegue = (UIStoryboardPopoverSegue *) segue;
+        pvController = [_popoverSegue destinationViewController];
         pvController.stringFromSegue = @"ChangedText";
-        
-        [pvController setDelegate:self];
+        pvController.delegate = self;
     }
 }
 
@@ -53,9 +58,7 @@
 {
     NSLog(@"popover returned: %@", theText);
     [_PopoverButton setTitle:theText forState:UIControlStateNormal];
-    
-    if (pvController) {
-        [pvController dismissViewControllerAnimated:YES completion:nil];
-    }
+    [_popoverSegue.popoverController dismissPopoverAnimated:YES];
 }
+
 @end
